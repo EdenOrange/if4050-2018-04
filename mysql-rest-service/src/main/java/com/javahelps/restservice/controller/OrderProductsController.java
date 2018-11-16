@@ -1,5 +1,7 @@
 package com.javahelps.restservice.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -28,8 +30,8 @@ public class OrderProductsController {
     }
 
     @GetMapping(path = "/{id}")
-    public OrderProducts find(@PathVariable("id") int id) {
-        return repository.findOne(id);
+    public List<OrderProducts> find(@PathVariable("id") int id) {
+        return repository.findByOrderCheckoutId(id);
     }
 
     @PostMapping(consumes = "application/json")

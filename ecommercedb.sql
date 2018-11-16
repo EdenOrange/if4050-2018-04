@@ -50,7 +50,6 @@ DROP TABLE IF EXISTS `cart`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `cart` (
   `id` int(11) NOT NULL,
-  `products` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -100,7 +99,6 @@ CREATE TABLE `order_checkout` (
   `id` int(11) NOT NULL,
   `buyer` int(11) NOT NULL,
   `payment` varchar(255) DEFAULT NULL,
-  `products` int(11) NOT NULL,
   `seller` int(11) NOT NULL,
   `shipment` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -201,7 +199,6 @@ DROP TABLE IF EXISTS `wishlist`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `wishlist` (
   `id` int(11) NOT NULL,
-  `products` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;

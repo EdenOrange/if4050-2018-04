@@ -74,8 +74,7 @@ DROP TABLE IF EXISTS `cart_products`;
 CREATE TABLE `cart_products` (
   `id` int(11) NOT NULL,
   `product_id` int(11) NOT NULL,
-  `product_quantity` int(11) NOT NULL,
-  PRIMARY KEY (`id`)
+  `product_quantity` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -125,8 +124,7 @@ DROP TABLE IF EXISTS `order_products`;
 CREATE TABLE `order_products` (
   `id` int(11) NOT NULL,
   `product_id` int(11) NOT NULL,
-  `product_quantity` int(11) NOT NULL,
-  PRIMARY KEY (`id`)
+  `product_quantity` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -156,6 +154,15 @@ CREATE TABLE `product` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Dumping data for table `product`
+--
+
+LOCK TABLES `product` WRITE;
+/*!40000 ALTER TABLE `product` DISABLE KEYS */;
+/*!40000 ALTER TABLE `product` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `seller`
 --
 
@@ -171,6 +178,15 @@ CREATE TABLE `seller` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `seller`
+--
+
+LOCK TABLES `seller` WRITE;
+/*!40000 ALTER TABLE `seller` DISABLE KEYS */;
+/*!40000 ALTER TABLE `seller` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `wishlist`
@@ -204,8 +220,7 @@ DROP TABLE IF EXISTS `wishlist_products`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `wishlist_products` (
   `id` int(11) NOT NULL,
-  `product_id` int(11) NOT NULL,
-  PRIMARY KEY (`id`)
+  `product_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -227,4 +242,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-11-15 17:47:25
+-- Dump completed on 2018-11-16 19:54:49

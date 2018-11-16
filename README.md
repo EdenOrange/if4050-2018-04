@@ -48,6 +48,16 @@ Method | Path | Description
 **DELETE** | `/orders/{id}` | Delete order with {id}
 **UPDATE** | `/orders/{id}` | Update order with {id}
 
+### Order Products
+
+Method | Path | Description
+--- | --- | ---
+**GET** | `/orders/products` | Read all order products
+**GET** | `/orders/products/{id}` | Read order product with {id}
+**POST** | `/orders/products` | Create a order product
+**DELETE** | `/orders/products/{id}` | Delete order product with {id}
+**UPDATE** | `/orders/products/{id}` | Update order product with {id}
+
 ### Cart
 
 Method | Path | Description
@@ -58,6 +68,16 @@ Method | Path | Description
 **DELETE** | `/carts/{id}` | Delete cart with {id}
 **UPDATE** | `/carts/{id}` | Update cart with {id}
 
+### Cart Products
+
+Method | Path | Description
+--- | --- | ---
+**GET** | `/carts/products` | Read all cart products
+**GET** | `/carts/products/{id}` | Read cart product with {id}
+**POST** | `/carts/products` | Create a cart product
+**DELETE** | `/carts/products/{id}` | Delete cart product with {id}
+**UPDATE** | `/carts/products/{id}` | Update cart product with {id}
+
 ### Wishlist
 
 Method | Path | Description
@@ -67,6 +87,16 @@ Method | Path | Description
 **POST** | `/wishlists` | Create a wishlist
 **DELETE** | `/wishlists/{id}` | Delete wishlist with {id}
 **UPDATE** | `/wishlists/{id}` | Update wishlist with {id}
+
+### Wishlist Products
+
+Method | Path | Description
+--- | --- | ---
+**GET** | `/wishlists/products` | Read all wishlist products
+**GET** | `/wishlists/products/{id}` | Read wishlist product with {id}
+**POST** | `/wishlists/products` | Create a wishlist product
+**DELETE** | `/wishlists/products/{id}` | Delete wishlist product with {id}
+**UPDATE** | `/wishlists/products/{id}` | Update wishlist product with {id}
 
 ## Member
 

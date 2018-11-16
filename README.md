@@ -4,11 +4,33 @@
 
 E-commerce is a domain that serves buying and selling products over the internet. This domain provides services such as searching product, buying product, selling product, paying product, delivering product, and else. This domain works together with payment gateway and logistic to fulfill the services.
 
+## Task Service
+
+### Buy Product
+
+Task to checkout an order containing products, payment detail, and shipment detail up to pay the order in a limited time.
+
+### Handle Order
+
+Task to notify seller to deliver the product ordered, check the shipment status, and fulfill payment to seller after delivered.
+
+### Refund Product
+
+Task to request a refund from an order that is completed with asking the seller's agreement.
+
 ## Entity Service
 
 ![alt text](ecommercedb.png "E-Commerce DB Model")
 
 ### Buyer
+
+Entity for user as buyer.
+
+- id : INT
+- name : TINYTEXT
+- email : TINYTEXT
+- password : TINYTEXT
+- address : TEXT
 
 Method | Path | Description
 --- | --- | ---
@@ -20,6 +42,14 @@ Method | Path | Description
 
 ### Seller
 
+Entity for user as seller.
+
+- id : INT
+- name : TINYTEXT
+- email : TINYTEXT
+- password : TINYTEXT
+- address : TEXT
+
 Method | Path | Description
 --- | --- | ---
 **GET** | `/sellers` | Read all sellers
@@ -29,6 +59,13 @@ Method | Path | Description
 **UPDATE** | `/sellers/{id}` | Update seller with {id}
 
 ### Product
+
+Entity for product in the catalog.
+
+- id : INT
+- seller : INT
+- name : TINYTEXT
+- price : DOUBLE
 
 Method | Path | Description
 --- | --- | ---
@@ -40,6 +77,14 @@ Method | Path | Description
 
 ### Order
 
+Entity for order between buyer and seller.
+
+- id : INT
+- buyer : INT
+- payment : VARCHAR
+- seller : INT
+- shipment : VARCHAR
+
 Method | Path | Description
 --- | --- | ---
 **GET** | `/orders` | Read all orders
@@ -49,6 +94,13 @@ Method | Path | Description
 **UPDATE** | `/orders/{id}` | Update order with {id}
 
 ### Order Products
+
+Entity for products in order.
+
+- id : INT
+- orderCheckoutId : INT
+- productId : INT
+- productQuantity : INT
 
 Method | Path | Description
 --- | --- | ---
@@ -60,6 +112,10 @@ Method | Path | Description
 
 ### Cart
 
+Entity for cart owned by buyer.
+
+- id : INT
+
 Method | Path | Description
 --- | --- | ---
 **GET** | `/carts` | Read all carts
@@ -69,6 +125,13 @@ Method | Path | Description
 **UPDATE** | `/carts/{id}` | Update cart with {id}
 
 ### Cart Products
+
+Entity for products in cart.
+
+- id : INT
+- cartId : INT
+- productId : INT
+- productQuantity : INT
 
 Method | Path | Description
 --- | --- | ---
@@ -80,6 +143,10 @@ Method | Path | Description
 
 ### Wishlist
 
+Entity for wishlist owned by buyer.
+
+- id : INT
+
 Method | Path | Description
 --- | --- | ---
 **GET** | `/wishlists` | Read all wishlists
@@ -89,6 +156,12 @@ Method | Path | Description
 **UPDATE** | `/wishlists/{id}` | Update wishlist with {id}
 
 ### Wishlist Products
+
+Entity for products in wishlist.
+
+- id : INT
+- wishlistId : INT
+- productId : INT
 
 Method | Path | Description
 --- | --- | ---

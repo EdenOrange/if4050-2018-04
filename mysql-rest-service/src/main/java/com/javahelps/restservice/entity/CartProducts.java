@@ -8,6 +8,7 @@ public class CartProducts {
 
     @Id
     private int id;
+    private int cartId;
     private int productId;
     private int productQuantity;
 
@@ -17,6 +18,14 @@ public class CartProducts {
 
     public void setId(int id) {
         this.id = id;
+    }
+    
+    public int getCartId() {
+        return cartId;
+    }
+
+    public void setCartId(int cartId) {
+        this.cartId = cartId;
     }
 	
 	public int getProductId() {
@@ -37,6 +46,6 @@ public class CartProducts {
 	
 	@Override
     public String toString() {
-        return "Cart{" + "id='" + id + '\'' + ", productId='" + productId + '\'' + ", productQuantity='" + productQuantity + '\'' + '}';
+        return "Cart{" + "id='" + id + '\'' + ", cartId='" + cartId + '\'' + ", productId='" + productId + '\'' + ", productQuantity='" + productQuantity + '\'' + '}';
     }
 }

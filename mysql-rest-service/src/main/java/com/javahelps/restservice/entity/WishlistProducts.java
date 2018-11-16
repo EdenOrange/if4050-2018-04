@@ -8,6 +8,7 @@ public class WishlistProducts {
 
     @Id
     private int id;
+    private int wishlistId;
     private int productId;
 
     public int getId() {
@@ -16,6 +17,14 @@ public class WishlistProducts {
 
     public void setId(int id) {
         this.id = id;
+    }
+    
+    public int getWishlistId() {
+        return wishlistId;
+    }
+
+    public void setWishlistId(int wishlistId) {
+        this.wishlistId = wishlistId;
     }
 	
 	public int getProductId() {
@@ -28,6 +37,6 @@ public class WishlistProducts {
 	
 	@Override
     public String toString() {
-        return "WishlistProducts{" + "id='" + id + '\'' + ", productId='" + productId + '\'' + '}';
+        return "WishlistProducts{" + "id='" + id + '\'' + ", wishlistId='" + wishlistId + '\'' + ", productId='" + productId + '\'' + '}';
     }
 }

@@ -73,8 +73,10 @@ DROP TABLE IF EXISTS `cart_products`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `cart_products` (
   `id` int(11) NOT NULL,
+  `cart_id` int(11) NOT NULL,
   `product_id` int(11) NOT NULL,
-  `product_quantity` int(11) NOT NULL
+  `product_quantity` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -123,8 +125,10 @@ DROP TABLE IF EXISTS `order_products`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `order_products` (
   `id` int(11) NOT NULL,
+  `order_checkout_id` int(11) NOT NULL,
   `product_id` int(11) NOT NULL,
-  `product_quantity` int(11) NOT NULL
+  `product_quantity` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -220,7 +224,9 @@ DROP TABLE IF EXISTS `wishlist_products`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `wishlist_products` (
   `id` int(11) NOT NULL,
-  `product_id` int(11) NOT NULL
+  `wishlist_id` int(11) NOT NULL,
+  `product_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 

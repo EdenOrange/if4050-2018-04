@@ -8,6 +8,7 @@ public class OrderProducts {
 
     @Id
     private int id;
+    private int orderCheckoutId;
     private int productId;
     private int productQuantity;
 
@@ -17,6 +18,14 @@ public class OrderProducts {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public int getOrderCheckoutId() {
+        return orderCheckoutId;
+    }
+
+    public void setOrderCheckoutId(int orderCheckoutId) {
+        this.orderCheckoutId = orderCheckoutId;
     }
 	
 	public int getProductId() {
@@ -37,6 +46,6 @@ public class OrderProducts {
 	
 	@Override
     public String toString() {
-        return "OrderProducts{" + "id='" + id + '\'' + ", productId='" + productId + '\'' + ", productQuantity='" + productQuantity + '\'' + '}';
+        return "OrderProducts{" + "id='" + id + '\'' + ", orderCheckoutId='" + orderCheckoutId + '\'' + ", productId='" + productId + '\'' + ", productQuantity='" + productQuantity + '\'' + '}';
     }
 }

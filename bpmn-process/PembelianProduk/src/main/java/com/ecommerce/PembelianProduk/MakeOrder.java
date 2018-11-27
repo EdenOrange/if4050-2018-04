@@ -37,7 +37,7 @@ public class MakeOrder implements JavaDelegate {
 		.setVariable("paymentTotal", paymentTotal)
 		.setVariable("shipmentMethodId", shipmentMethodId)
 		.setVariable("shipmentAddress", shipmentAddress)
-		.processInstanceBusinessKey("1")
+		.processInstanceBusinessKey(execution.getBusinessKey())
 		.correlate();
 	}
 

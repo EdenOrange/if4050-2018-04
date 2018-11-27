@@ -8,7 +8,6 @@ public class Cart {
 
     @Id
     private int id;
-    private int products;
 
     public int getId() {
         return id;
@@ -18,16 +17,8 @@ public class Cart {
         this.id = id;
     }
 	
-	public int getProducts() {
-		return products;
-	}
-
-	public void setProducts(int products) {
-		this.products = products;
-	}
-	
 	@Override
     public String toString() {
-        return "Cart{" + "id='" + id + '\'' + ", products='" + products + '\'' + '}';
+        return "Cart{" + "id='" + id + '\'' + '}';
     }
 }

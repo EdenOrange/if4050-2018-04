@@ -12,7 +12,6 @@ public class OrderCheckout {
     private int seller;
     private String payment;
     private String shipment;
-    private int products;
 
     public int getId() {
         return id;
@@ -54,16 +53,8 @@ public class OrderCheckout {
 		this.shipment = shipment;
 	}
 	
-	public int getProducts() {
-		return products;
-	}
-
-	public void setProducts(int products) {
-		this.products = products;
-	}
-	
 	@Override
     public String toString() {
-        return "OrderCheckout{" + "id='" + id + '\'' + "buyer='" + buyer + '\'' + "seller='" + seller + '\'' + "payment='" + payment + '\'' + "shipment='" + shipment + '\'' + ", products='" + products + '\'' + '}';
+        return "OrderCheckout{" + "id='" + id + '\'' + "buyer='" + buyer + '\'' + "seller='" + seller + '\'' + "payment='" + payment + '\'' + "shipment='" + shipment + '\'' + '}';
     }
 }
